@@ -1,0 +1,64 @@
+<br>
+<form>
+    <div class="row">
+        <label>Categoria: </label>
+        <select class="form-control col-md-2">
+            <option value="">Selecciones ..</option>
+            <option>{{palabra.categoria}}</option>  
+          </select>   
+    </div> 
+    <br>
+    <div>
+        <button type="button" class="btn btn-primary" (click)="LimpiarVP()">Inicio</button>
+    </div>
+
+    <br>
+    <div class="row alert alert-info">
+        <label for="para" class="col-3">Vidas: {{cantidad_vidas}}</label>
+        <label for="para" class="col-3"></label>
+        <label for="para" class="col-3">Puntaje: {{cantidad_puntaje}}</label>
+        <label for="para" class="col-3"></label>
+    </div>
+    <div class="row offset-3 " >
+         <div class="card-group">
+            <img src="assets/img/{{palabra.scr}}" class="col-12" alt="" >
+        </div> 
+    </div>
+    <div class="form-group row justify-content-center">
+        <input *ngIf="PalabraIngles.length >=1" class="form-control col-2" type="text" name="letter0" id="letter0"
+            [(ngModel)]="letra0" (ngModelChange)="ponerLetra()" />
+
+        <input *ngIf="PalabraIngles.length >=2" class="form-control col-2" type="text" name="letter1" id="letter1"
+            [(ngModel)]="letra1" (ngModelChange)="ponerLetra()" />
+
+        <input *ngIf="PalabraIngles.length >=3" class="form-control col-2" type="text" name="letter2" id="letter2"
+            [(ngModel)]="letra2" (ngModelChange)="ponerLetra()" />
+
+        <input *ngIf="PalabraIngles.length >=4" class="form-control col-2" type="text" name="letter3" id="letter3"
+            [(ngModel)]="letra3" (ngModelChange)="ponerLetra()" />
+
+        <input *ngIf="PalabraIngles.length >=5" class="form-control col-2" type="text" name="letter4" id="letter4"
+            [(ngModel)]="letra4" (ngModelChange)="ponerLetra()" />
+
+        <input *ngIf="PalabraIngles.length >=6" class="form-control col-2" type="text" name="letter5" id="letter5"
+            [(ngModel)]="letra5" (ngModelChange)="ponerLetra()" />
+
+        <input *ngIf="PalabraIngles.length >=7" class="form-control col-2" type="text" name="letter6" id="letter6"
+            [(ngModel)]="letra6" (ngModelChange)="ponerLetra()" />
+
+        <input *ngIf="PalabraIngles.length >=8" class="form-control col-2" type="text" name="letter7" id="letter7"
+            [(ngModel)]="letra7" (ngModelChange)="ponerLetra()" />
+
+        <input *ngIf="PalabraIngles.length >=9" class="form-control col-2" type="text" name="letter8" id="letter8"
+            [(ngModel)]="letra8" (ngModelChange)="ponerLetra()" />   
+        
+        <input *ngIf="PalabraIngles.length >=10" class="form-control col-2" type="text" name="letter9" id="letter9"
+            [(ngModel)]="letra9" (ngModelChange)="ponerLetra()" />
+    </div>
+</form>
+<div class="row alert alert-info ">
+   <div>{{palabra.castellano}}</div> 
+</div>
+<div class="row alert alert-info ">
+    <div>Puntaje Total: {{puntajeTotal}}</div> 
+ </div>
